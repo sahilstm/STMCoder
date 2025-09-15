@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Check Your Age</title>
+  <link rel="stylesheet" href="./css/check-your-age.css">
+</head>
+<body>
+  <div class="card">
+    <h2>Check Your Age</h2>
+    <label for="age">Enter your age:</label><br>
+    <input type="number" id="age" placeholder="Enter age">
+    <button onclick="showAge()">Submit</button>
+
+    <div class="spinner" id="spinner"></div>
+
+    <p class="loading" id="loading"></p>
+
+    <p id="result"></p>
+  </div>
+
+  <script>
+    function showAge() {
+      const age = document.getElementById("age").value;
+      const result = document.getElementById("result");
+      const loading = document.getElementById("loading");
+      const spinner = document.getElementById("spinner");
+
+      result.innerHTML = "";
+      loading.innerHTML = "";
+      spinner.style.display = "none";
+
+      if (!age) {
+        result.innerHTML = "⚠️ Please enter your age.";
+        return;
+      }
+
+      const steps = [
+        "🔌 Connecting to server...",
+        "🔒 Encrypting data...",
+        "🛰️ Checking satellite...",
+        "🤖 Calling backup AI...",
+        "📲 Updating social media...",
+        "✅ Verifying...",
+        "🧮 Calculating...",
+        "⏳ Loading...",
+        "😅 Almost done..."
+      ];
+
+      let i = 0;
+      spinner.style.display = "block";
+
+      function nextStep() {
+        if (i < steps.length) {
+          loading.innerHTML = steps[i];
+          i++;
+          setTimeout(nextStep, 1000); 
+        } else {
+          spinner.style.display = "none";
+          loading.innerHTML = "";
+          result.innerHTML = `🎉 Your age is: <b>${age}</b>`;
+        }
+      }
+
+      nextStep();
+    }
+  </script>
+</body>
+</html>

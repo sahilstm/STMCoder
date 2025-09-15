@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Year Predictor</title>
+    <link rel="stylesheet" href="./css/year-predictor.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Year Predictor</h2>
+
+      <input type="number" id="yearInput" placeholder="Enter Year" />
+      <button id="predictBtn">Predict Year</button>
+
+      <div id="loaderBox" class="hidden">
+        <p id="loaderText"></p>
+        <div class="dot-loader"><span></span><span></span><span></span></div>
+      </div>
+
+      <div id="result" class="hidden"></div>
+    </div>
+
+    <script src="./js/year-predictor.js"></script>
+  </body>
+</html>

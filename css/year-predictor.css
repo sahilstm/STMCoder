@@ -1,0 +1,151 @@
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background: linear-gradient(135deg, #1d2671, #c33764);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 15px;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px 30px;
+  border-radius: 20px;
+  text-align: center;
+  backdrop-filter: blur(15px);
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-4px);
+}
+
+h2 {
+  margin-bottom: 25px;
+  font-size: 1.9rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+input,
+button {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 18px;
+  text-align: center;
+  outline: none;
+  box-sizing: border-box;
+}
+
+input {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-weight: 500;
+}
+
+input::placeholder {
+  color: #ddd;
+}
+
+button {
+  font-size: 1.05rem;
+  font-weight: bold;
+  background: linear-gradient(135deg, #ff3d3d, #ff9800);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #ff9800, #ff3d3d);
+  transform: scale(1.02);
+}
+
+#loaderBox {
+  margin-top: 25px;
+}
+
+.hidden {
+  display: none;
+}
+
+#loaderText {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.dot-loader {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.dot-loader span {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  animation: bounce 1s infinite alternate;
+}
+
+.dot-loader span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.dot-loader span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+  to {
+    transform: translateY(-8px);
+    opacity: 1;
+  }
+}
+
+#result {
+  margin-top: 25px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ffe57f;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 30px 20px;
+    max-width: 90%;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 25px 18px;
+  }
+
+  input,
+  button {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+}

@@ -1,0 +1,133 @@
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background: linear-gradient(135deg, #1d2671, #c33764);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 15px;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 35px 25px;
+  border-radius: 20px;
+  text-align: center;
+  backdrop-filter: blur(12px);
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+h2 {
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+select,
+button {
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: none;
+  font-size: 1.05rem;
+  box-sizing: border-box;
+}
+
+select {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-weight: 500;
+  outline: none;
+  appearance: none;
+  text-align: center;
+}
+
+select option {
+  background: #1d2671;
+  color: #fff;
+}
+
+button {
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  letter-spacing: 0.5px;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #ff9800, #ff3d3d);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+#loaderBox {
+  margin-top: 25px;
+}
+
+.spinner {
+  margin: 18px auto;
+  border: 5px solid rgba(255, 255, 255, 0.25);
+  border-top: 5px solid #fff;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ffe57f;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 25px 20px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  select,
+  button {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  select,
+  button {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+#result {
+  font-size: 1rem;
+  
+}
+}

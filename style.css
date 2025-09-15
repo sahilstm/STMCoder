@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background: linear-gradient(270deg, #1d2671, #c33764, #ff6a00, #00c6ff);
+  background-size: 800% 800%;
+  animation: gradientBG 18s ease infinite;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+header {
+  text-align: center;
+  padding: 60px 20px 30px;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.button-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.btn {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  padding: 20px;
+  border-radius: 18px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  transition: all 0.35s ease;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 10px 30px rgba(255, 152, 0, 0.7);
+  border-color: #ff9800;
+  background: rgba(255, 255, 255, 0.25);
+  color: #ffe57f;
+}
+
+footer {
+  text-align: center;
+  padding: 18px;
+  background: rgba(0, 0, 0, 0.25);
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 900px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+  .btn {
+    font-size: 1.1rem;
+    padding: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  header p {
+    font-size: 1rem;
+  }
+  .btn {
+    font-size: 1rem;
+    padding: 16px;
+  }
+}
