@@ -36,33 +36,10 @@ function verifyOTP() {
         document.getElementById("step2").classList.add("hidden");
         document.getElementById("step3").classList.remove("hidden");
 
-        const funnySteps = [
-            "Processing your request... ⏳",
-            "Calibrating quantum engine... ⚡",
-            "Going physics with codes... 🔬",
-            "Consulting with aliens... 👽",
-            "Asking astrologers... 🔮",
-            "Calculating via potato... 🥔",
-            "Finalizing result... ✅",
-            "Almost done... ⌛"
-        ];
-
-        const processingDiv = document.querySelector(".processing");
-        let stepIndex = 0;
-
-        function showNextStep() {
-            if (stepIndex < funnySteps.length) {
-                processingDiv.textContent = funnySteps[stepIndex];
-                stepIndex++;
-                setTimeout(showNextStep, 1500); 
-            } else {
-                document.getElementById("step3").classList.add("hidden");
-                document.getElementById("step4").classList.remove("hidden");
-            }
-        }
-
-        showNextStep();
-
+        setTimeout(() => {
+            document.getElementById("step3").classList.add("hidden");
+            document.getElementById("step4").classList.remove("hidden");
+        }, 2000);
     } else {
         document.getElementById("errorMsg").classList.remove("hidden");
         setTimeout(() => {
