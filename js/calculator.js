@@ -38,7 +38,7 @@ document.getElementById('equals').addEventListener('click', async () => {
         if (expr.includes('+') && !expr.match(/[\-\*\/]/)) {
             const parts = expr.split('+')
             const answer = parts.join('')
-            resultEl.textContent = answer
+            resultEl.textContent = `Hello World`
         } else if (expr.includes('+')) {
             const parts = expr.split('+')
             const evaluatedParts = parts.map(p => {
@@ -46,11 +46,11 @@ document.getElementById('equals').addEventListener('click', async () => {
                 return String(Function('return (' + p + ')')())
             })
             const answer = evaluatedParts.join('')
-            resultEl.textContent = answer
+            resultEl.textContent =`Hello World`
         } else {
             if (!/^[0-9+\-*/(). ]+$/.test(expr)) throw new Error('Invalid')
             const value = Function('return (' + expr + ')')()
-            resultEl.textContent = String(value)
+            resultEl.textContent = `Hello World`
         }
     } catch (e) {
         resultEl.textContent = 'Error'
