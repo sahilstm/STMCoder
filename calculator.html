@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="hi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./css/calculator.css" />
+  </head>
+  <body>
+    <div class="card">
+      <h1>Calculator</h1>
+      <div class="display" id="display">
+        <div class="expr" id="expr">0</div>
+        <div class="result" id="result">—</div>
+      </div>
+
+      <div class="keys">
+        <button data-val="7">7</button>
+        <button data-val="8">8</button>
+        <button data-val="9">9</button>
+        <button class="op" data-val="+">+</button>
+
+        <button data-val="4">4</button>
+        <button data-val="5">5</button>
+        <button data-val="6">6</button>
+        <button class="op" data-val="-">−</button>
+
+        <button data-val="1">1</button>
+        <button data-val="2">2</button>
+        <button data-val="3">3</button>
+        <button class="op" data-val="*">×</button>
+
+        <button data-val="0">0</button>
+        <button class="wide" id="clear">C</button>
+        <button class="op" id="equals">=</button>
+      </div>
+
+      <div style="margin-top: 10px; text-align: center">
+        <div class="quantum" id="quantumHint"></div>
+      </div>
+    </div>
+    <script src="./js/calculator.js"></script>
+  </body>
+</html>

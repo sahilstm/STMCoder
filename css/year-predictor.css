@@ -1,24 +1,21 @@
 body {
-  font-family: "Poppins", Arial, sans-serif;
-  background: linear-gradient(135deg, #1d2671, #c33764);
-  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  height: 100vh;
   margin: 0;
-  padding: 15px;
 }
 
 .container {
-  background: rgba(255, 255, 255, 0.1);
+  background: #ffffff;
   padding: 40px 30px;
   border-radius: 20px;
   text-align: center;
-  backdrop-filter: blur(15px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   width: 100%;
   max-width: 400px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s ease;
 }
 
@@ -30,7 +27,7 @@ h2 {
   margin-bottom: 25px;
   font-size: 1.9rem;
   font-weight: 600;
-  letter-spacing: 1px;
+  color: #333;
 }
 
 input,
@@ -39,7 +36,7 @@ button {
   padding: 14px;
   font-size: 1rem;
   border-radius: 10px;
-  border: none;
+  border: 1px solid #ccc;
   margin-bottom: 18px;
   text-align: center;
   outline: none;
@@ -47,26 +44,27 @@ button {
 }
 
 input {
-  background: rgba(255, 255, 255, 0.15);
-  color: #fff;
+  background: #f1f1f1;
+  color: #333;
   font-weight: 500;
 }
 
 input::placeholder {
-  color: #ddd;
+  color: #999;
 }
 
 button {
   font-size: 1.05rem;
   font-weight: bold;
-  background: linear-gradient(135deg, #ff3d3d, #ff9800);
+  background: linear-gradient(135deg, #4caf50, #81c784);
   color: white;
   cursor: pointer;
+  border: none;
   transition: all 0.3s ease;
 }
 
 button:hover {
-  background: linear-gradient(135deg, #ff9800, #ff3d3d);
+  background: linear-gradient(135deg, #81c784, #4caf50);
   transform: scale(1.02);
 }
 
@@ -82,6 +80,7 @@ button:hover {
   font-size: 1.1rem;
   margin-bottom: 12px;
   font-weight: 500;
+  color: #555;
 }
 
 .dot-loader {
@@ -93,7 +92,7 @@ button:hover {
 .dot-loader span {
   width: 10px;
   height: 10px;
-  background: white;
+  background: #4caf50;
   border-radius: 50%;
   animation: bounce 1s infinite alternate;
 }
@@ -120,7 +119,7 @@ button:hover {
   margin-top: 25px;
   font-size: 1.3rem;
   font-weight: bold;
-  color: #ffe57f;
+  color: #4caf50;
 }
 
 @media (max-width: 768px) {
