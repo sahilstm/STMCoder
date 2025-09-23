@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="hi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Funny Age Finder</title>
+    <link rel="stylesheet" href="./css/age-finder.css" />
+  </head>
+  <body>
+    <div class="card" role="region" aria-label="Funny Age Finder">
+      <h1>Age Finder</h1>
+      <div id="controls">
+        <button id="start">Find my age</button>
+      </div>
+
+      <div id="loaderArea" class="hidden" aria-live="polite">
+        <div class="loader-wrap">
+          <div class="spinner" id="spinner" aria-hidden="true"></div>
+          <div class="steps" id="stepsList">
+            <div class="step" id="s1">Analyzing your face data...</div>
+            <div class="step" id="s2">Scanning social media activity...</div>
+            <div class="step" id="s3">
+              Checking your birth certificate in government file...
+            </div>
+            <div class="step" id="s4">Finalizing result...</div>
+            <div class="step" id="s5">Almost done...</div>
+          </div>
+        </div>
+      </div>
+
+      <div id="result" class="result" role="status" aria-live="polite">
+        <span id="resultText">Ask your parents</span>
+      </div>
+    </div>
+    <script src="./js/age-finder.js"></script>
+  </body>
+</html>
